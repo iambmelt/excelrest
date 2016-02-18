@@ -12,20 +12,20 @@ POST /workbook/worksheets(<id|name>)/charts(<name>)/Image
 ### Request headers
 | Name       | Description|
 |:---------------|:----------|
-| Authorization  | Bearer <code>|
-| Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
+| `Authorization`  | `Bearer <token>`|
+| `Workbook-Session-Id` | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|height|number|Optional. The desired height of the resulting image.|
-|width|number|Optional. The desired width of the resulting image.|
-|fittingMode|string|Optional. The method used to scale the chart to the specified to the specified dimensions (if both height and width are set)."  Possible values are: `Fit`, `FitAndCenter`, `Fill`.|
+|`height`|number|Optional. The desired height of the resulting image.|
+|`width`|number|Optional. The desired width of the resulting image.|
+|`fittingMode`|string|Optional. The method used to scale the chart to the specified to the specified dimensions (if both height and width are set)."  Possible values are: `Fit`, `FitAndCenter`, `Fill`.|
 
 ### Response
-If successful, this method returns `200, OK` response code and [System.IO.Stream](../resources/system.io.stream.md) object in the response body.
+If successful, this method returns `200 OK` response code and [System.IO.Stream](../resources/system.io.stream.md) object in the response body.
 
 ### Example
 Here is an example of how to call this API.
